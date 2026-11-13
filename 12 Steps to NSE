@@ -1,0 +1,25 @@
+#Step 1 : Linear Convection Equation
+import numpy as np
+from matplotlib import pyplot
+import time, sys
+
+#Space Grid
+nx = 81
+dx = 2/(nx-1)
+
+#Time Grid
+nt = 25
+dt = 0.025
+
+#Speed of propagation
+c = 1
+
+#Setting up IC
+u = np.ones(nx)
+u[int(0.5/dx): int(1/dx)] = 2
+print(u)
+
+pyplot.plot(np.linspace(0,2,nx), u)
+pyplot.show()
+
+
