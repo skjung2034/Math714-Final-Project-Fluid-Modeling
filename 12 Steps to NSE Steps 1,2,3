@@ -1,8 +1,7 @@
-#Step 1 : Linear Convection Equation
+# %% Step 1 : Linear Convection Equation
 import numpy as np
 from matplotlib import pyplot
 import time, sys
-#%matplotlib inline 
 
 #Space Grid
 nx = 81
@@ -37,7 +36,11 @@ pyplot.plot(np.linspace(0, 2, nx), u)
 pyplot.show()
 
 
-#Step 2 : Nonlinear Convection Equation [Burgers]
+# %% Step 2 : Nonlinear Convection Equation [Burgers]
+import numpy as np
+from matplotlib import pyplot
+import time, sys
+
 #Setting up IC
 u = np.ones(nx)
 u[int(0.5/dx): int(1/dx)] = 2
@@ -59,7 +62,11 @@ print(u)
 pyplot.plot(np.linspace(0, 2, nx), u)
 pyplot.show()
 
-#Step 3: 1D Diffusion - modeling dt u = v d^2 x u
+#%% Step 3: 1D Diffusion - modeling dt u = v d^2 x u
+import numpy as np
+from matplotlib import pyplot
+import time, sys
+
 #Setting up the parameters
 nx = 41
 dx = 2 / (nx - 1)
@@ -88,3 +95,4 @@ print(u)
 
 pyplot.plot(np.linspace(0, 2, nx), u)
 pyplot.show()
+# %%
